@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contributors - washiez.lol</title>
+  <link rel="icon" href="https://washiez.lol/icon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="https://washiez.lol/icon.png" />
+  <meta property="og:title" content="Contributors - washiez.lol" />
+  <meta property="og:description" content="View all Contributors at washiez.lol" />
+  <meta property="og:image" content="https://washiez.lol/icon.png" />
+  <meta property="og:url" content="https://washiez.lol" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#3b82f6" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #0a0a0a, #14142b);
+      color: white;
+      margin: 0;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+    .grid-bg {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-image: linear-gradient(to right, #ffffff10 1px, transparent 1px), 
+                        linear-gradient(to bottom, #ffffff10 1px, transparent 1px);
+      background-size: 50px 50px;
+      z-index: -1;
+    }
+    .navbar {
+      display: flex; justify-content: center; gap: 20px; padding: 20px;
+      background: rgba(31, 41, 55, 0.2); backdrop-filter: blur(10px);
+    }
+    .navbar a {
+      padding: 10px 20px; color: #9ca3af; text-decoration: none; font-weight: bold;
+      background: #111827; border-radius: 8px; transition: background 0.3s ease;
+    }
+    .navbar a:hover { background: #1f2937; }
+    h1 { font-size: 3rem; margin-top: 40px; text-shadow: 0 0 10px #ffffff50; }
+    .contributors { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 40px; }
+    .contributor-card {
+      background: rgba(17, 24, 39, 0.5); padding: 20px; border-radius: 12px;
+      width: 250px; text-align: center; backdrop-filter: blur(10px);
+    }
+    .contributor-card img {
+      width: 100px; height: 100px; border-radius: 50%;
+      box-shadow: 0 0 10px #00000050;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <div class="navbar">
+    <a href="https://washiez.lol/index">Home</a>
+    <a href="https://washiez.lol/contributors">Contributors</a>
+    <a href="https://washiez.lol/partners">Partners</a>
+  </div>
+
+  <h1>Contributors</h1>
+  <p>Meet the awesome people who helped make this project possible!</p>
+
+  <div class="contributors">
+    <div class="contributor-card">
+      <img src="https://washiez.lol/pfps/burntribs-image.png" alt="BurntRibs24 pfp">
+      <h3>BurntRibs24</h3>
+      <p>Founded washiez.lol</p>
+    </div>
+    
+    <div class="contributor-card">
+      <img src="https://washiez.lol/pfps/rosploiter-image.png" alt="rosploiter pfp">
+      <h3>rosploiter</h3>
+      <p>Developer</p>
+    </div>
+  
+    <div class="contributor-card">
+      <img src="https://washiez.lol/pfps/mye-image.png" alt="mye pfp">
+      <h3>mye_real</h3>
+      <p>Developer</p>
+    </div>
+  </div>  
+    </div>
+  </div>
+</body>
+</html>
