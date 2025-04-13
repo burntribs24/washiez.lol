@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +23,30 @@
       background: linear-gradient(to bottom right, #0a0a0a, #14142b);
       color: white;
       overflow-x: hidden;
+    }
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: rgba(31, 41, 55, 0.2);
+      padding: 20px;
+      gap: 20px;
+      backdrop-filter: blur(10px); 
+    }
+    .navbar a {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #111827;
+      color: #9ca3af;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+    .navbar a:hover {
+      background-color: #1f2937;
+    }
+    .navbar a:active {
+      background-color: #374151;
     }
     h1 {
       font-size: 4rem;
@@ -175,10 +198,20 @@
       .section img {
         border-radius: 14px;
       }
+
+      .btn-secondary {
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="navbar">
+    <a href="https://washiez.lol">Home</a>
+    <a href="https://washiez.lol/contributors">Contributors</a>
+    <a href="https://washiez.lol/partners">Partners</a>
+  </div>
+
   <div class="grid-bg"></div>
   <h1>washiez.lol</h1>
   <p>The ultimate free script for Washiez on Roblox</p>
@@ -199,58 +232,12 @@
       <div>✔️ Vehicle Modifications (noclip)</div>
       <div>✔️ Teleporters (including training center)</div>
     </div>
-<div class="section" data-aos="fade-up">
-  <h2>How to Use</h2>
-  <div class="features">
-    <div><strong>PC:</strong></div>
-    <div>1. Download an executor. I recommend Swift 
-      <a href="https://getswift.gg" target="_blank" class="btn btn-secondary" style="font-size: 0.85rem; display: inline-flex; align-items: center; gap: 6px;">Open 
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
-          <path d="M11.5 1.5a.5.5 0 0 1 .5.5v4.793l2.146-2.147a.5.5 0 1 1 .707.707L12.207 7H16a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5H1a.5.5 0 0 1-.5-.5V1a.5.5 0 0 1 .5-.5h10z"/>
-        </svg>
-      </a>
-    </div>
-    <div>2. Setup the executor. You may need to turn off your antivirus or whitelist the executor.</div>
-    <div>3. Once it is all setup, open the executor and join a Roblox game.</div>
-    <div>4. Inject your executor.</div>
-    <div>5. Paste the script in from above and hit Start.</div>
-    <div>6. You're ready to go!</div>
-    <br><br>
-    <div><strong>Mobile:</strong></div>
-    <div>Coming Soon...</div>
   </div>
-</div>
-<div class="section" data-aos="fade-up">
-  <h2>Partners</h2>
-  <div class="features">
-    <div>🤝 <strong>Roblox Trolling Union</strong></div>
-    <div class="partner-buttons">
-      <a href="https://robloxtrollers.xyz" target="_blank" class="btn btn-secondary">Visit Website</a>
-      <a href="https://discord.gg/robloxtrollers" target="_blank" class="btn btn-secondary">Join Discord</a>
-    </div>
-  </div>
-</div>
-<style>
-  .partner-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  .partner-buttons a {
-    text-align: center;
-    flex: 1;
-  }
-  @media (max-width: 768px) {
-    .partner-buttons {
-      flex-direction: row;
-    }
-  }
-</style>
-  </div>
+
   <div class="footer">
     We are not partnered or affiliated with the Washiez game, or any Washiez owned projects or places.<br>Copyright © 2025 washiez.lol - All rights reserved
   </div>
+
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
   <script>
