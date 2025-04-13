@@ -12,7 +12,6 @@
   <meta property="og:url" content="https://washiez.lol" />
   <meta name="twitter:card" content="summary" />
   <meta name="theme-color" content="#3b82f6" />
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; }
     body {
@@ -27,8 +26,7 @@
       overflow-x: hidden;
     }
     .grid-bg {
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
       background-image: linear-gradient(to right, #ffffff10 1px, transparent 1px), 
                         linear-gradient(to bottom, #ffffff10 1px, transparent 1px);
       background-size: 50px 50px;
@@ -39,12 +37,25 @@
       background: rgba(31, 41, 55, 0.2); backdrop-filter: blur(10px);
     }
     .navbar a {
-      padding: 10px 20px; color: #9ca3af; text-decoration: none; font-weight: bold;
-      background: #111827; border-radius: 8px; transition: background 0.3s ease;
+      padding: 12px 24px; color: #9ca3af; text-decoration: none; font-weight: bold;
+      background: #111827; border-radius: 10px; transition: background-color 0.3s ease;
     }
     .navbar a:hover { background: #1f2937; }
-    h1 { font-size: 3rem; margin-top: 40px; text-shadow: 0 0 10px #ffffff50; }
-    .contributors { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 40px; }
+    h1 {
+      font-size: 4rem;
+      text-shadow: 0 0 10px #ffffff50;
+      text-align: center;
+      margin-top: 60px;
+    }
+    p {
+      font-size: 1.2rem;
+      color: #ccc;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .contributors {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 40px;
+    }
     .contributor-card {
       background: rgba(17, 24, 39, 0.5); padding: 20px; border-radius: 12px;
       width: 250px; text-align: center; backdrop-filter: blur(10px);
@@ -83,8 +94,6 @@
       <img src="https://washiez.lol/pfps/mye-image.png" alt="mye pfp">
       <h3>mye_real</h3>
       <p>Developer</p>
-    </div>
-  </div>  
     </div>
   </div>
 </body>
