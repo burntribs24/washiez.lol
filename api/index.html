@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API - washiez.lol</title>
+    <link rel="icon" href="https://washiez.lol/icon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="https://washiez.lol/icon.png" />
+    <meta property="og:title" content="API - washiez.lol" />
+    <meta property="og:description" content="Public API for washiez.lol" />
+    <meta property="og:image" content="https://washiez.lol/icon.png" />
+    <meta property="og:url" content="https://washiez.lol" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="theme-color" content="#3b82f6" />
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: monospace;
+            margin: 0;
+            padding: 10px;
+        }
+        pre {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <pre id="data"></pre>
+    <script>
+        const dataElement = document.getElementById('data');
+        
+        async function fetchData() {
+            try {
+                const response = await fetch(`https://api.jsonbin.io/v3/b/67fbf6e78a456b7966888303/latest`);
+                
+                if (!response.ok) {
+                    throw new Error(`Error: ${response.status}`);
+                }
+                
+                const fullData = await response.json();
+                
+                const recordData = fullData.record;
+                
+                dataElement.textContent = JSON.stringify(recordData, null, 2);
+                
+            } catch (error) {
+                dataElement.textContent = `Error: ${error.message}`;
+            }
+        }
+        fetchData();
+    </script>
+</body>
+</html>
+
