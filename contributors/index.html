@@ -33,14 +33,29 @@
       z-index: -1;
     }
     .navbar {
-      display: flex; justify-content: center; gap: 20px; padding: 20px;
-      background: rgba(31, 41, 55, 0.2); backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      background-color: rgba(31, 41, 55, 0.2);
+      padding: 20px;
+      gap: 20px;
+      backdrop-filter: blur(10px); 
     }
     .navbar a {
-      padding: 12px 24px; color: #9ca3af; text-decoration: none; font-weight: bold;
-      background: #111827; border-radius: 10px; transition: background-color 0.3s ease;
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #111827;
+      color: #9ca3af;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
     }
-    .navbar a:hover { background: #1f2937; }
+    .navbar a:hover {
+      background-color: #1f2937;
+    }
+    .navbar a:active {
+      background-color: #374151;
+    }
     h1 {
       font-size: 4rem;
       text-shadow: 0 0 10px #ffffff50;
