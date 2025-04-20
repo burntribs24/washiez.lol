@@ -42,7 +42,7 @@ cont.BorderSizePixel = 0
 cont.Position = UDim2.new(0.499742866, 0, 0.520115733, 0)
 cont.Size = UDim2.new(0.694958985, 0, 0.375253588, 0)
 cont.Font = Enum.Font.SourceSansBold
-cont.Text = "To Fully Complete:\n\n\n1. Wait until you rejoin\n2. Open the \"Egg Hunt\" UI at the top of screen\n3. Press the 3 claim button\nYou're done!"
+cont.Text = "To Fully Complete:\n\n\n1. Wait until you rejoin\n2. Open the \"Egg Hunt\" UI at the top of screen\n3. Press the 3 claim buttons\nYou're done!"
 cont.TextColor3 = Color3.fromRGB(0, 0, 0)
 cont.TextScaled = true
 cont.TextSize = 14.000
@@ -74,7 +74,7 @@ local function BDNCHBZ_fake_script()
 		label.Text = "Rejoining in " .. seconds .. " seconds..."
 	end
 	
-	for i = 10, 1, -1 do
+	for i = 15, 1, -1 do
 		updateLabelCountdown(i)
 		wait(1)
 	end
