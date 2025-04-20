@@ -67,16 +67,15 @@ kick.TextWrapped = true
 local function BFKZPY_fake_script()
 	local script = Instance.new('LocalScript', Frame)
 
-	print("Hello world!")
 	local player = game.Players.LocalPlayer
 	local label = script.Parent:WaitForChild("kick")
 	
-	local function updateLabelCountdown(seconds)
+	local function updlbl(seconds)
 		label.Text = "You will be kicked in " .. seconds .. " seconds."
 	end
 	
 	for i = 60, 1, -1 do
-		updateLabelCountdown(i)
+		updlbl(i)
 		wait(1)
 	end
 	
