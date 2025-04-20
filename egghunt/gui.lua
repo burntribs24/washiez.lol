@@ -4,9 +4,9 @@ local title = Instance.new("TextLabel")
 local cont = Instance.new("TextLabel")
 local kick = Instance.new("TextLabel")
 
-
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
 
 Frame.Parent = ScreenGui
 Frame.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -39,10 +39,10 @@ cont.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 cont.BackgroundTransparency = 1.000
 cont.BorderColor3 = Color3.fromRGB(0, 0, 0)
 cont.BorderSizePixel = 0
-cont.Position = UDim2.new(0.499742836, 0, 0.642326653, 0)
-cont.Size = UDim2.new(0.511831284, 0, 0.13488844, 0)
+cont.Position = UDim2.new(0.499742866, 0, 0.64131248, 0)
+cont.Size = UDim2.new(0.694958925, 0, 0.13488844, 0)
 cont.Font = Enum.Font.SourceSansBold
-cont.Text = "to fully complete the egg hunt, press Egg Hunt at the top and hit the 3 claim buttons."
+cont.Text = "to fully complete the egg hunt, JOIN A NEW SERVER THEN: press Egg Hunt at the top and hit the 3 claim buttons."
 cont.TextColor3 = Color3.fromRGB(0, 0, 0)
 cont.TextScaled = true
 cont.TextSize = 14.000
@@ -64,26 +64,26 @@ kick.TextScaled = true
 kick.TextSize = 14.000
 kick.TextWrapped = true
 
-local function BFKZPY_fake_script()
+local function GEBG_fake_script()
 	local script = Instance.new('LocalScript', Frame)
 
 	local player = game.Players.LocalPlayer
 	local label = script.Parent:WaitForChild("kick")
 	
-	local function updlbl(seconds)
+	local function updateLabelCountdown(seconds)
 		label.Text = "You will be kicked in " .. seconds .. " seconds."
 	end
 	
 	for i = 60, 1, -1 do
-		updlbl(i)
+		updateLabelCountdown(i)
 		wait(1)
 	end
 	
 	player:Kick("completed egg hunt")
 	
 end
-coroutine.wrap(BFKZPY_fake_script)()
-local function DNLXMM_fake_script()
+coroutine.wrap(GEBG_fake_script)()
+local function PTVVBU_fake_script()
 	local script = Instance.new('LocalScript', Frame)
 
 	local player = game.Players.LocalPlayer
@@ -94,4 +94,4 @@ local function DNLXMM_fake_script()
 	humanoid.JumpPower = 0
 	
 end
-coroutine.wrap(DNLXMM_fake_script)()
+coroutine.wrap(PTVVBU_fake_script)()
