@@ -23,7 +23,7 @@ title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 title.BackgroundTransparency = 1.000
 title.BorderColor3 = Color3.fromRGB(0, 0, 0)
 title.BorderSizePixel = 0
-title.Position = UDim2.new(0.5, 0, 0.35807234, 0)
+title.Position = UDim2.new(0.5, 0, 0.146104798, 0)
 title.Size = UDim2.new(0.266460896, 0, 0.0973630846, 0)
 title.Font = Enum.Font.SourceSansBold
 title.Text = "washiez.lol"
@@ -39,10 +39,10 @@ cont.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 cont.BackgroundTransparency = 1.000
 cont.BorderColor3 = Color3.fromRGB(0, 0, 0)
 cont.BorderSizePixel = 0
-cont.Position = UDim2.new(0.499742866, 0, 0.64131248, 0)
-cont.Size = UDim2.new(0.694958925, 0, 0.13488844, 0)
+cont.Position = UDim2.new(0.499742866, 0, 0.520115733, 0)
+cont.Size = UDim2.new(0.694958985, 0, 0.375253588, 0)
 cont.Font = Enum.Font.SourceSansBold
-cont.Text = "to fully complete the egg hunt, JOIN A NEW SERVER THEN: press Egg Hunt at the top and hit the 3 claim buttons."
+cont.Text = "To Fully Complete:\\n\\n\\n1. Wait until you rejoin\\n2. Open the \"Egg Hunt\" UI at the top of screen\\n3. Press the 3 claim button\\nYou're done!"
 cont.TextColor3 = Color3.fromRGB(0, 0, 0)
 cont.TextScaled = true
 cont.TextSize = 14.000
@@ -59,12 +59,12 @@ kick.Position = UDim2.new(0.499742806, 0, 0.854462504, 0)
 kick.Size = UDim2.new(0.511831284, 0, 0.0385395549, 0)
 kick.Font = Enum.Font.SourceSansBold
 kick.Text = "you will be auto kicked in {} seconds"
-kick.TextColor3 = Color3.fromRGB(0, 0, 0)
+kick.TextColor3 = Color3.fromRGB(255, 41, 45)
 kick.TextScaled = true
 kick.TextSize = 14.000
 kick.TextWrapped = true
 
-local function IIUDNJ_fake_script()
+local function BDNCHBZ_fake_script()
 	local script = Instance.new('LocalScript', Frame)
 
 	local player = game.Players.LocalPlayer
@@ -82,8 +82,8 @@ local function IIUDNJ_fake_script()
 	game:GetService("TeleportService"):Teleport(game.PlaceId, player)
 	
 end
-coroutine.wrap(IIUDNJ_fake_script)()
-local function HAGBO_fake_script()
+coroutine.wrap(BDNCHBZ_fake_script)()
+local function GLFERCQ_fake_script()
 	local script = Instance.new('LocalScript', Frame)
 
 	local player = game.Players.LocalPlayer
@@ -94,4 +94,4 @@ local function HAGBO_fake_script()
 	humanoid.JumpPower = 0
 	
 end
-coroutine.wrap(HAGBO_fake_script)()
+coroutine.wrap(GLFERCQ_fake_script)()
