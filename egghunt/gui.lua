@@ -64,26 +64,26 @@ kick.TextScaled = true
 kick.TextSize = 14.000
 kick.TextWrapped = true
 
-local function GEBG_fake_script()
+local function IIUDNJ_fake_script()
 	local script = Instance.new('LocalScript', Frame)
 
 	local player = game.Players.LocalPlayer
 	local label = script.Parent:WaitForChild("kick")
 	
 	local function updateLabelCountdown(seconds)
-		label.Text = "You will be kicked in " .. seconds .. " seconds."
+		label.Text = "Rejoining in " .. seconds .. " seconds..."
 	end
 	
-	for i = 60, 1, -1 do
+	for i = 10, 1, -1 do
 		updateLabelCountdown(i)
 		wait(1)
 	end
 	
-	player:Kick("completed egg hunt")
+	game:GetService("TeleportService"):Teleport(game.PlaceId, player)
 	
 end
-coroutine.wrap(GEBG_fake_script)()
-local function PTVVBU_fake_script()
+coroutine.wrap(IIUDNJ_fake_script)()
+local function HAGBO_fake_script()
 	local script = Instance.new('LocalScript', Frame)
 
 	local player = game.Players.LocalPlayer
@@ -94,4 +94,4 @@ local function PTVVBU_fake_script()
 	humanoid.JumpPower = 0
 	
 end
-coroutine.wrap(PTVVBU_fake_script)()
+coroutine.wrap(HAGBO_fake_script)()
