@@ -1,1 +1,185 @@
-Coming Soon
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Washiez Anticheat Docs - washiez.lol</title>
+  <link rel="icon" href="https://washiez.lol/icon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="https://washiez.lol/icon.png" />
+  <meta property="og:title" content="Washiez Anticheat Docs - washiez.lol" />
+  <meta property="og:description" content="Deep dive into the Washiez client-side anticheat system" />
+  <meta property="og:image" content="https://washiez.lol/icon.png" />
+  <meta property="og:url" content="https://washiez.lol/docs/washiez-anticheat" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#3b82f6" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #0a0a0a, #14142b);
+      color: white;
+      overflow-x: hidden;
+    }
+    .navbar {
+      display: flex;
+      justify-content: center;
+      background-color: rgba(31, 41, 55, 0.2);
+      padding: 20px;
+      gap: 20px;
+      backdrop-filter: blur(10px); 
+    }
+    .navbar a {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #111827;
+      color: #9ca3af;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+    .navbar a:hover {
+      background-color: #1f2937;
+    }
+    .navbar a:active {
+      background-color: #374151;
+    }
+    h1 {
+      font-size: 4rem;
+      text-shadow: 0 0 10px #ffffff50;
+      text-align: center;
+      margin-top: 60px;
+    }
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-top: 60px;
+      border-bottom: 1px solid #374151;
+      padding-bottom: 10px;
+    }
+    p, ul {
+      font-size: 1.2rem;
+      color: #ccc;
+      line-height: 1.75;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    ul {
+      text-align: left;
+    }
+    pre {
+      background-color: #111827;
+      padding: 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+    img {
+      width: 90%;
+      max-width: 800px;
+      display: block;
+      margin: 30px auto;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #00000050;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.8rem;
+      color: #666;
+    }
+    .grid-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to right, #ffffff10 1px, transparent 1px), 
+                        linear-gradient(to bottom, #ffffff10 1px, transparent 1px);
+      background-size: 50px 50px;
+      z-index: -1;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <div class="navbar">
+    <a href="https://washiez.lol">Home</a>
+    <a href="https://washiez.lol/contributors">Contributors</a>
+    <a href="https://washiez.lol/partners">Partners</a>
+  </div>
+
+  <main class="container">
+    <h1>Washiez Anticheat Documentation</h1>
+    <p>This is a breakdown of the Washiez anticheat client-side system. After decompilation, the full implementation is available here for analysis.</p>
+    <img src="https://washiez.lol/docs/imgs/image1.png" alt="Client Files" />
+    <img src="https://washiez.lol/docs/imgs/image2.png" alt="Client Folder" />
+
+    <h2>CarFlingDetection.lua</h2>
+    <p>Basic fling detection: checks if an entity isn’t the local player, then inspects the PrimaryPart's velocity. If it's 2500 across all axes, the entity is quarantined.</p>
+    <img src="https://washiez.lol/docs/imgs/image3.png" alt="CarFlingDetection" />
+
+    <h2>CarFlingDetection2.lua</h2>
+    <p>Improved fling detection. Main functions:</p>
+    <ul>
+      <li><code>checkvelocity()</code> — returns true if velocity > 2000</li>
+      <li><code>unquarantine()</code> — logs when an object is unquarantined</li>
+      <li><code>quarantine()</code> — applies the "Exploiting" collision group and enforces it</li>
+      <li>Relies on the Janitor module from <code>ReplicatedStorage</code></li>
+    </ul>
+    <img src="https://washiez.lol/docs/imgs/image4.png" alt="CarFlingDetection2" />
+    <p><strong>Update Quarantine:</strong> If 5 seconds pass since a quarantine, the object is restored.</p>
+    <img src="https://washiez.lol/docs/imgs/image5.png" alt="Update Quarantine" />
+    <p><strong>Loop Logic:</strong> Continuously scans all cars (except local), using <code>checkvelocity()</code> to determine if quarantine is needed.</p>
+    <img src="https://washiez.lol/docs/imgs/image6.png" alt="RunService Loop" />
+
+    <h2>LocalScript.lua</h2>
+    <p>Debugging tool by Magik. Prints live velocity data for testing.</p>
+    <img src="https://washiez.lol/docs/imgs/image7.png" alt="LocalScript Debug" />
+
+    <h2>PlayerFlingDetection1.lua</h2>
+    <p>Fling checks for players:</p>
+    <ul>
+      <li>Uses RunService for frame updates</li>
+      <li>Checks valid character, PrimaryPart collision, Humanoid state</li>
+      <li>Flags any motion (linear/angular) over 5000</li>
+      <li>Flags result in collision group change and Janitor-based cleanup</li>
+    </ul>
+    <img src="https://washiez.lol/docs/imgs/image8.png" alt="PlayerFlingDetection1" />
+
+    <h2>PlayerFlingDetection2.lua</h2>
+    <p>Same concept as CarFlingDetection2 but for players. Threshold is set to 500.</p>
+
+    <h2>SizeDetection.lua</h2>
+    <p>Detects car resizing exploits:</p>
+    <ul>
+      <li>Stores original bounding box volume</li>
+      <li>Checks volume every 0.1 seconds</li>
+      <li>Flags cars outside 75%–125% of original volume</li>
+      <li>Also flags if <code>CanCollide</code> is false</li>
+    </ul>
+    <img src="https://washiez.lol/docs/imgs/image9.png" alt="SizeDetection" />
+    <p>This component focuses on maintaining fair hitboxes and preventing physics abuse by comparing size consistency.</p>
+    <p><strong>Version: 1.0.0 — Subject to change with future updates</strong></p>
+  </main>
+
+  <footer>
+    This site is not affiliated with Washiez game or its developers.<br />
+    &copy; 2025 washiez.lol — All rights reserved.
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+</body>
+</html>
